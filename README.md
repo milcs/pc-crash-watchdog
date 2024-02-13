@@ -11,6 +11,7 @@ PC Crash Watchdog consist of two components:
 ![PC Crash Watchdog - Board.png](img%2FPC%20Crash%20Watchdog%20-%20Board.png)
 
 ## Instructions
+### Setup
 1. Setup the board connecting it to one of your USB ports. Depending on the board (Nano) it might require special drivers. For example: CH341SER.zip - Download [details and instructions](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/windows-710). The ino sketch can be found in pc-crash-watchdog-arduino folder.
 
 3. Determine the COM port and update the ```pc-crash-watchdog.ps1```:
@@ -19,6 +20,16 @@ Edit the line: ```$comPort    = 'COM5'    # Set to COM port of the PC WATCHDOG D
 setting the right port number.
 
 4. Having the board connected to USB and to your PC reset PIN, run the ```pc-crash-watchdog.ps1```
+
+###  Hardware Manifest
+- 1 x Breadboard
+- 1 x Arduino [Nano](https://store.arduino.cc/products/arduino-nano) 
+- 1 x Optocoupler - [4N35](https://www.componentsinfo.com/4n35-optocoupler-pinout-datasheet/)
+- 2 x Resistor 220 Ω (5 band: red, red, black, black, brown), 5th color - Tolerance can also be 2% (red) or 5% (gold)
+- 1 x Push button
+- 2 x LED (green, red)
+
+Wire the board as per Board image.
 
 ## Notes:
 Once the board is powered it will start a countdown of 30 mins (about) and will trigger 
